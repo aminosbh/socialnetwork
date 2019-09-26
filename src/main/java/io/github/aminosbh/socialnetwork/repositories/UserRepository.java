@@ -22,9 +22,20 @@ import java.util.List;
 import io.github.aminosbh.socialnetwork.entities.User;
 
 public class UserRepository {
-
-  private List<User> users = new ArrayList<>();
   
+  private List<User> users = new ArrayList<>();
+
+  public static UserRepository repository = null;
+
+  public static UserRepository getInstance() {
+    if (repository == null) {
+      repository = new UserRepository();
+    }
+    return repository;
+  }
+
+  private UserRepository() {}
+
   public void add(User user) {
     users.add(user);
   }
@@ -33,6 +44,10 @@ public class UserRepository {
     users.remove(user);
   }
   
+  public List<User> findAll() {
+    return users;
+  }
+
   public User findByLoginAndPassword(String login, String password) {
     
     for (User user : users) {

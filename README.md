@@ -99,6 +99,12 @@ The repository pattern abstracts the data store and enables your business logic
 to define read and write operations on a logical level.  
 So we'll dedicated a `repositories` package to handle all repository classes.
 
+*Singleton pattern:*  
+The singleton design pattern restricts the instantiation of a class to one
+"single" instance. This is useful when exactly one unique object is needed
+across the whole system. This will be useful for the repository classes and
+later for the database connection handler.
+
 
 
 [git]: https://git-scm.com
