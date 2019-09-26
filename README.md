@@ -18,8 +18,61 @@ This project uses [Maven][] as a build system and [Eclipse][Eclipse IDE] as
 a main IDE.
 
 
+**Chapter 1:** Contacts management
+
+In this chapter, we are going to implement the `Contacts management` module.  
+We'll start by declaring the different necessary entities (classes, interfaces,
+enumerations). This list will be enriched with further entities while developing
+the other modules of this project.
+
+
+*Coding style:*  
+The implementation of our project should follows the [Google Coding Style][].
+We can also find some details about that coding style in a [document][Twitter Coding Style]
+written by Twitter as part of its [Java common libraries][Twitter common libraries]
+
+
+*Entities:*  
+
+    class User:
+        login
+        password
+        firstName
+        lastName
+        dateOfBirth: Date
+        gender: Gender
+        photos: List<Photo>
+        locations: List<Location>
+        emails: List<Email>
+        phoneNumbers: List<PhoneNumber>
+        contacts: List<User>
+
+    enum Gender:
+        MALE, FEMALE
+
+    class Photo:
+        uri: URI
+        title
+
+    class Location:
+        country
+        address
+        label
+
+    class Email:
+        address
+        label
+
+    class PhoneNumber:
+        countryCallingCode: int
+        number: long
+        label
+
+
 
 [git]: https://git-scm.com
 [Maven]: https://maven.apache.org
 [Eclipse IDE]: https://www.eclipse.org
-
+[Google Coding Style]: https://google.github.io/styleguide/javaguide.html
+[Twitter Coding Style]: https://github.com/twitter/commons/blob/master/src/java/com/twitter/common/styleguide.md
+[Twitter common libraries]: https://github.com/twitter/commons
