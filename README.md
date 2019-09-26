@@ -12,5 +12,14 @@ different commits to lean about the different steps and development decisions.
 Each commit is self-documented.
 
 
+**Chapter 0:** Create a Maven project
+
+This project uses [Maven][] as a build system and [Eclipse][Eclipse IDE] as
+a main IDE.
+
+
 
 [git]: https://git-scm.com
+[Maven]: https://maven.apache.org
+[Eclipse IDE]: https://www.eclipse.org
+
