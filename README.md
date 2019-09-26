@@ -31,6 +31,17 @@ The implementation of our project should follows the [Google Coding Style][].
 We can also find some details about that coding style in a [document][Twitter Coding Style]
 written by Twitter as part of its [Java common libraries][Twitter common libraries]
 
+*Best practicies:*
+
+- Choosing the right collections
+- Always using interface type when declaring a collection.
+- Use generic type and diamond operator
+- Specify initial capacity of a collection if possible
+- Prefer isEmpty() over size()
+- Do not use the classic for loop
+- etc
+
+[More details][Collections and Generics Best Practices]
 
 *Entities:*  
 
@@ -76,3 +87,4 @@ written by Twitter as part of its [Java common libraries][Twitter common librari
 [Google Coding Style]: https://google.github.io/styleguide/javaguide.html
 [Twitter Coding Style]: https://github.com/twitter/commons/blob/master/src/java/com/twitter/common/styleguide.md
 [Twitter common libraries]: https://github.com/twitter/commons
+[Collections and Generics Best Practices]: https://www.codejava.net/java-core/collections/18-java-collections-and-generics-best-practices
