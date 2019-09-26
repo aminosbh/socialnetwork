@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class User {
+public class User implements ContactItem {
 
   private String login;
   private String password;
@@ -34,7 +34,7 @@ public class User {
   private List<Location> locations = new ArrayList<>();
   private List<Email> emails = new ArrayList<>();
   private List<PhoneNumber> phoneNumbers = new ArrayList<>();
-  private List<User> contacts = new ArrayList<>();
+  private List<ContactItem> contacts = new ArrayList<>();
   
   public User(String login, String password) {
     this.login = login;
@@ -164,19 +164,19 @@ public class User {
     phoneNumbers.remove(phoneNumber);
   }
 
-  public List<User> getContacts() {
+  public List<ContactItem> getContacts() {
     return contacts;
   }
 
-  public void setContacts(List<User> contacts) {
+  public void setContacts(List<ContactItem> contacts) {
     this.contacts = contacts;
   }
 
-  public void addContact(User contact) {
+  public void addContact(ContactItem contact) {
     contacts.add(contact);
   }
 
-  public void removeContact(User contact) {
+  public void removeContact(ContactItem contact) {
     contacts.remove(contact);
   }
 }

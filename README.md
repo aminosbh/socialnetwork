@@ -45,7 +45,7 @@ written by Twitter as part of its [Java common libraries][Twitter common librari
 
 *Entities:*  
 
-    class User:
+    class User implements ContactItem:
         login
         password
         firstName
@@ -56,7 +56,7 @@ written by Twitter as part of its [Java common libraries][Twitter common librari
         locations: List<Location>
         emails: List<Email>
         phoneNumbers: List<PhoneNumber>
-        contacts: List<User>
+        contacts: List<ContactItem>
 
     enum Gender:
         MALE, FEMALE
@@ -78,6 +78,13 @@ written by Twitter as part of its [Java common libraries][Twitter common librari
         countryCallingCode: int
         number: long
         label
+
+    interface ContactItem
+
+    class Group implements ContactItem:
+        name
+        description
+        contacts: List<ContactItem>
 
 
 
