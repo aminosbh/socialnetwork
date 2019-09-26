@@ -108,12 +108,28 @@ public class User {
     this.photos = photos;
   }
 
+  public void addPhoto(Photo photo) {
+    photos.add(photo);
+  }
+
+  public void removePhoto(Photo photo) {
+    photos.remove(photo);
+  }
+
   public List<Location> getLocations() {
     return locations;
   }
 
   public void setLocations(List<Location> locations) {
     this.locations = locations;
+  }
+
+  public void addLocation(Location location) {
+    locations.add(location);
+  }
+
+  public void removeLocation(Location location) {
+    locations.remove(location);
   }
 
   public List<Email> getEmails() {
@@ -124,6 +140,14 @@ public class User {
     this.emails = emails;
   }
 
+  public void addEmail(Email email) {
+    emails.add(email);
+  }
+
+  public void removeEmail(Email email) {
+    emails.remove(email);
+  }
+
   public List<PhoneNumber> getPhoneNumbers() {
     return phoneNumbers;
   }
@@ -132,11 +156,27 @@ public class User {
     this.phoneNumbers = phoneNumbers;
   }
 
+  public void addPhoneNumber(PhoneNumber phoneNumber) {
+    phoneNumbers.add(phoneNumber);
+  }
+
+  public void removePhoneNumber(PhoneNumber phoneNumber) {
+    phoneNumbers.remove(phoneNumber);
+  }
+
   public List<User> getContacts() {
     return contacts;
   }
 
   public void setContacts(List<User> contacts) {
     this.contacts = contacts;
+  }
+
+  public void addContact(User contact) {
+    contacts.add(contact);
+  }
+
+  public void removeContact(User contact) {
+    contacts.remove(contact);
   }
 }
