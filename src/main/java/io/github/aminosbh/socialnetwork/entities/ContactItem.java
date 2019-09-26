@@ -14,37 +14,8 @@
  * limitations under the License.
  */
 
-package io.github.aminosbh.socialnetwork;
+package io.github.aminosbh.socialnetwork.entities;
 
-import java.net.URI;
+public interface ContactItem {
 
-public class Photo {
-
-  private URI uri;
-  private String title;
-  
-  public Photo(URI uri) {
-    this.uri = uri;
-  }
-
-  public Photo(URI uri, String title) {
-    this.uri = uri;
-    this.title = title;
-  }
-
-  public URI getUri() {
-    return uri;
-  }
-  
-  public void setUri(URI uri) {
-    this.uri = uri;
-  }
-  
-  public String getTitle() {
-    return title;
-  }
-  
-  public void setTitle(String title) {
-    this.title = title;
-  }
 }

@@ -86,6 +86,14 @@ written by Twitter as part of its [Java common libraries][Twitter common librari
         description
         contacts: List<ContactItem>
 
+*[MVC][] pattern*
+
+It's a good practice to follow the MVC design pattern, so it's better that we
+move the different entities in a dedicated package `entities`.
+
+You can find a basic implement of the MVC design pattern here:  
+https://www.geeksforgeeks.org/mvc-design-pattern
+
 
 
 [git]: https://git-scm.com
@@ -95,3 +103,4 @@ written by Twitter as part of its [Java common libraries][Twitter common librari
 [Twitter Coding Style]: https://github.com/twitter/commons/blob/master/src/java/com/twitter/common/styleguide.md
 [Twitter common libraries]: https://github.com/twitter/commons
 [Collections and Generics Best Practices]: https://www.codejava.net/java-core/collections/18-java-collections-and-generics-best-practices
+[MVC]: https://www.educba.com/what-is-mvc-design-pattern

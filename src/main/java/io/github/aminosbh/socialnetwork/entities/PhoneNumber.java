@@ -14,39 +14,39 @@
  * limitations under the License.
  */
 
-package io.github.aminosbh.socialnetwork;
+package io.github.aminosbh.socialnetwork.entities;
 
-public class Location {
+public class PhoneNumber {
 
-  private String country;
-  private String address;
+  private int countryCallingCode;
+  private long number;
   private String label;
   
-  public Location(String country, String address) {
-    this.country = country;
-    this.address = address;
+  public PhoneNumber(int countryCallingCode, long number) {
+    this.countryCallingCode = countryCallingCode;
+    this.number = number;
   }
 
-  public Location(String country, String address, String label) {
-    this.country = country;
-    this.address = address;
+  public PhoneNumber(int countryCallingCode, long number, String label) {
+    this.countryCallingCode = countryCallingCode;
+    this.number = number;
     this.label = label;
   }
 
-  public String getCountry() {
-    return country;
+  public int getCountryCallingCode() {
+    return countryCallingCode;
   }
 
-  public void setCountry(String country) {
-    this.country = country;
+  public void setCountryCallingCode(int countryCallingCode) {
+    this.countryCallingCode = countryCallingCode;
   }
 
-  public String getAddress() {
-    return address;
+  public long getNumber() {
+    return number;
   }
 
-  public void setAddress(String address) {
-    this.address = address;
+  public void setNumber(long number) {
+    this.number = number;
   }
 
   public String getLabel() {

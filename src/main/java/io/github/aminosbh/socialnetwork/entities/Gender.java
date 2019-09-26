@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package io.github.aminosbh.socialnetwork;
+package io.github.aminosbh.socialnetwork.entities;
 
 public enum Gender {
 

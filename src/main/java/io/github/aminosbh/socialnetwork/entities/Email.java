@@ -14,39 +14,28 @@
  * limitations under the License.
  */
 
-package io.github.aminosbh.socialnetwork;
+package io.github.aminosbh.socialnetwork.entities;
 
-public class PhoneNumber {
+public class Email {
 
-  private int countryCallingCode;
-  private long number;
+  private String address;
   private String label;
   
-  public PhoneNumber(int countryCallingCode, long number) {
-    this.countryCallingCode = countryCallingCode;
-    this.number = number;
+  public Email(String address) {
+    this.address = address;
   }
-
-  public PhoneNumber(int countryCallingCode, long number, String label) {
-    this.countryCallingCode = countryCallingCode;
-    this.number = number;
+  
+  public Email(String address, String label) {
+    this.address = address;
     this.label = label;
   }
 
-  public int getCountryCallingCode() {
-    return countryCallingCode;
+  public String getAddress() {
+    return address;
   }
 
-  public void setCountryCallingCode(int countryCallingCode) {
-    this.countryCallingCode = countryCallingCode;
-  }
-
-  public long getNumber() {
-    return number;
-  }
-
-  public void setNumber(long number) {
-    this.number = number;
+  public void setAddress(String address) {
+    this.address = address;
   }
 
   public String getLabel() {

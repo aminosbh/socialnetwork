@@ -14,20 +14,31 @@
  * limitations under the License.
  */
 
-package io.github.aminosbh.socialnetwork;
+package io.github.aminosbh.socialnetwork.entities;
 
-public class Email {
+public class Location {
 
+  private String country;
   private String address;
   private String label;
   
-  public Email(String address) {
+  public Location(String country, String address) {
+    this.country = country;
     this.address = address;
   }
-  
-  public Email(String address, String label) {
+
+  public Location(String country, String address, String label) {
+    this.country = country;
     this.address = address;
     this.label = label;
+  }
+
+  public String getCountry() {
+    return country;
+  }
+
+  public void setCountry(String country) {
+    this.country = country;
   }
 
   public String getAddress() {
