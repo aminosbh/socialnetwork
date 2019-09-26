@@ -94,6 +94,11 @@ move the different entities in a dedicated package `entities`.
 You can find a basic implement of the MVC design pattern here:  
 https://www.geeksforgeeks.org/mvc-design-pattern
 
+*Repository pattern:*  
+The repository pattern abstracts the data store and enables your business logic
+to define read and write operations on a logical level.  
+So we'll dedicated a `repositories` package to handle all repository classes.
+
 
 
 [git]: https://git-scm.com
