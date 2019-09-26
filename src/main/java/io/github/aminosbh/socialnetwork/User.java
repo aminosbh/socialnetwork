@@ -16,6 +16,7 @@
 
 package io.github.aminosbh.socialnetwork;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -29,11 +30,11 @@ public class User {
   private Date dateOfBirth;
   private Gender gender;
   
-  private List<Photo> photos; 
-  private List<Location> locations;
-  private List<Email> emails;
-  private List<PhoneNumber> phoneNumbers;
-  private List<User> contacts;
+  private List<Photo> photos = new ArrayList<>();
+  private List<Location> locations = new ArrayList<>();
+  private List<Email> emails = new ArrayList<>();
+  private List<PhoneNumber> phoneNumbers = new ArrayList<>();
+  private List<User> contacts = new ArrayList<>();
   
   public User(String login, String password) {
     this.login = login;
