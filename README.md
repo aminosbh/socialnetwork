@@ -12,38 +12,38 @@ different commits to lean about the different steps and development decisions.
 Each commit is self-documented.
 
 
-**Chapter 0:** Create a Maven project
+## **Chapter 0:** Create a Maven project
 
 This project uses [Maven][] as a build system and [Eclipse][Eclipse IDE] as
 a main IDE.
 
 
-**Chapter 1:** Contacts management
+## **Chapter 1:** Contacts management
 
 In this chapter, we are going to implement the `Contacts management` module.  
 We'll start by declaring the different necessary entities (classes, interfaces,
 enumerations). This list will be enriched with further entities while developing
 the other modules of this project.
 
+### Coding style:
 
-*Coding style:*  
 The implementation of our project should follows the [Google Coding Style][].
 We can also find some details about that coding style in a [document][Twitter Coding Style]
 written by Twitter as part of its [Java common libraries][Twitter common libraries]
 
-*Best practicies:*
+### Best practices:
 
 - Choosing the right collections
 - Always using interface type when declaring a collection.
 - Use generic type and diamond operator
 - Specify initial capacity of a collection if possible
-- Prefer isEmpty() over size()
+- Prefer `isEmpty()` over `size()`
 - Do not use the classic for loop
 - etc
 
-[More details][Collections and Generics Best Practices]
+[For more details][Collections and Generics Best Practices]
 
-*Entities:*  
+### Entities implementation
 
     class User implements ContactItem:
         login
@@ -86,20 +86,22 @@ written by Twitter as part of its [Java common libraries][Twitter common librari
         description
         contacts: List<ContactItem>
 
-*[MVC][] pattern*
+### MVC pattern
 
-It's a good practice to follow the MVC design pattern, so it's better that we
+It's a good practice to follow the [MVC][] design pattern, so it's better that we
 move the different entities in a dedicated package `entities`.
 
 You can find a basic implement of the MVC design pattern here:  
 https://www.geeksforgeeks.org/mvc-design-pattern
 
-*Repository pattern:*  
+### Repository pattern:
+
 The repository pattern abstracts the data store and enables your business logic
 to define read and write operations on a logical level.  
-So we'll dedicated a `repositories` package to handle all repository classes.
+So we'll dedicated a `repositories` package to contain all repository classes.
 
-*Singleton pattern:*  
+### Singleton pattern:
+
 The singleton design pattern restricts the instantiation of a class to one
 "single" instance. This is useful when exactly one unique object is needed
 across the whole system. This will be useful for the repository classes and
