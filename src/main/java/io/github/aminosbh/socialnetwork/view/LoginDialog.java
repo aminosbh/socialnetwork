@@ -29,12 +29,23 @@ import com.jgoodies.forms.layout.FormLayout;
 import com.jgoodies.forms.layout.ColumnSpec;
 import com.jgoodies.forms.layout.FormSpecs;
 import com.jgoodies.forms.layout.RowSpec;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class LoginDialog extends JDialog {
 
   private final JPanel contentPanel = new JPanel();
   private JTextField fldLogin;
   private JTextField fldPassword;
+
+  private static class OnLogin implements ActionListener {
+
+    @Override
+    public void actionPerformed(ActionEvent arg0) {
+      System.out.println("The login button is pressed");
+    }
+
+  }
 
   /**
    * Create the dialog.
@@ -80,6 +91,7 @@ public class LoginDialog extends JDialog {
       getContentPane().add(buttonPane, BorderLayout.SOUTH);
       {
         JButton btnLogin = new JButton("Login");
+        btnLogin.addActionListener(new OnLogin());
         btnLogin.setActionCommand("OK");
         buttonPane.add(btnLogin);
         getRootPane().setDefaultButton(btnLogin);
