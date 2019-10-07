@@ -30,6 +30,11 @@ public class UserRepository {
   public static UserRepository getInstance() {
     if (repository == null) {
       repository = new UserRepository();
+
+      // Fake users
+      repository.add(new User("toto", "password1", "Toto", "TOTO"));
+      repository.add(new User("titi", "password2", "Titi", "TOTO"));
+      repository.add(new User("tata", "password3", "Tata", "TOTO"));
     }
     return repository;
   }
