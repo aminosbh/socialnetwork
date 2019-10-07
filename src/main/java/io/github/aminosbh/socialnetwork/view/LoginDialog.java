@@ -38,15 +38,6 @@ public class LoginDialog extends JDialog {
   private JTextField fldLogin;
   private JTextField fldPassword;
 
-  private static class OnLogin implements ActionListener {
-
-    @Override
-    public void actionPerformed(ActionEvent arg0) {
-      System.out.println("The login button is pressed");
-    }
-
-  }
-
   /**
    * Create the dialog.
    */
@@ -91,7 +82,14 @@ public class LoginDialog extends JDialog {
       getContentPane().add(buttonPane, BorderLayout.SOUTH);
       {
         JButton btnLogin = new JButton("Login");
-        btnLogin.addActionListener(new OnLogin());
+        btnLogin.addActionListener(new ActionListener() {
+
+          @Override
+          public void actionPerformed(ActionEvent arg0) {
+            System.out.println("The login button is pressed");
+          }
+
+        });
         btnLogin.setActionCommand("OK");
         buttonPane.add(btnLogin);
         getRootPane().setDefaultButton(btnLogin);
