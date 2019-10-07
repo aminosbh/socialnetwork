@@ -52,12 +52,18 @@ The best way to import this Git project into Eclipse is to import it first as a
 - In the `Import` wizard:
   1. Click `Git` > `Projects from Git`. Click `Next`.
   2. Click `Clone URI` and then click `Next`.
-  3. In the `Source Git Repository` window, in the `URI` field, enter an existing Git repository URL and click `Next`.
-  4. In the `Branch Selection` window, make sure that the `master` branch is selected and click `Next`.
-  5. In the `Local Destination` window, specify the destination directory or keep the default value and then click `Next`.\
-  The `Cloning from <Git repository>` window shows the progress of the cloning process.
-  6. In the menu `Wizard of project import`, select `Import as general project`. Click `Next`.
-  7. In the `Import Projects` window, confirm or edit the default parameters and click `Finish`.
+  3. In the `Source Git Repository` window, in the `URI` field, enter an
+     existing Git repository URL and click `Next`.
+  4. In the `Branch Selection` window, make sure that the `master` branch is
+     selected and click `Next`.
+  5. In the `Local Destination` window, specify the destination directory or
+     keep the default value and then click `Next`.\
+     The `Cloning from <Git repository>` window shows the progress of the
+     cloning process.
+  6. In the menu `Wizard of project import`, select `Import as general project`.
+     Click `Next`.
+  7. In the `Import Projects` window, confirm or edit the default parameters and
+     click `Finish`.
 
 **Convert into Maven Project:**
 
@@ -134,8 +140,8 @@ written by Twitter as part of its [Java common libraries][Twitter common librari
 
 ### MVC pattern
 
-It's a good practice to follow the [MVC][] design pattern, so it's better that we
-move the different entities in a dedicated package `entities` .  
+It's a good practice to follow the [MVC][] design pattern, so it's better that
+we move the different entities in a dedicated package `entities` .  
 You can find a basic implement of the MVC design pattern here:
 https://www.geeksforgeeks.org/mvc-design-pattern
 
@@ -153,16 +159,31 @@ across the whole system.
 You can find more details and an example of the
 implementation of the singleton design pattern here:
 https://www.geeksforgeeks.org/singleton-class-java .  
-This pattern will be useful for the repository classes. Let's start by the `UserRepository` class.
+This pattern will be useful for the repository classes. Let's start by the
+`UserRepository` class.
 
 
+## License
 
+This project is primarily distributed under the terms of both the MIT license
+and the Apache License (Version 2.0). See [COPYRIGHT][COPYRIGHT],
+[LICENSE-APACHE][LICENSE-APACHE], [LICENSE-MIT][LICENSE-MIT],
+[DOC-LICENSE][DOC-LICENSE], [AUTHORS][AUTHORS] and [CONTRIBUTORS][CONTRIBUTORS]
+for more details.
+
+
+[AUTHORS]: AUTHORS
+[Collections and Generics Best Practices]: https://www.codejava.net/java-core/collections/18-java-collections-and-generics-best-practices
+[CONTRIBUTORS]: CONTRIBUTORS
+[COPYRIGHT]: COPYRIGHT
+[DOC-LICENSE]: DOC-LICENSE
+[Eclipse IDE]: https://www.eclipse.org
 [Git]: https://git-scm.com
+[Google Coding Style]: https://google.github.io/styleguide/javaguide.html
+[LICENSE-APACHE]: LICENSE-APACHE
+[LICENSE-MIT]: LICENSE-MIT
 [Maven]: https://maven.apache.org
 [Maven naming conventions]: https://maven.apache.org/guides/mini/guide-naming-conventions.html
-[Eclipse IDE]: https://www.eclipse.org
-[Google Coding Style]: https://google.github.io/styleguide/javaguide.html
+[MVC]: https://www.educba.com/what-is-mvc-design-pattern
 [Twitter Coding Style]: https://github.com/twitter/commons/blob/master/src/java/com/twitter/common/styleguide.md
 [Twitter common libraries]: https://github.com/twitter/commons
-[Collections and Generics Best Practices]: https://www.codejava.net/java-core/collections/18-java-collections-and-generics-best-practices
-[MVC]: https://www.educba.com/what-is-mvc-design-pattern
