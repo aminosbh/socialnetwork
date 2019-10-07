@@ -17,7 +17,8 @@ Each commit is self-documented.
 This project uses [Maven][] as a build system and [Eclipse][Eclipse IDE] as
 a main IDE.
 
-The best way to import this Git project into Eclipse is to import it first as a `General Git Project` and then convert it to `Maven Project`:
+The best way to import this Git project into Eclipse is to import it first as a
+`General Git Project` and then convert it to `Maven Project`:
 
 **Import as a General Git Project:**
 
@@ -60,9 +61,9 @@ written by Twitter as part of its [Java common libraries][Twitter common librari
 - Do not use the classic for loop
 - etc
 
-[For more details][Collections and Generics Best Practices]
+[For more details about `Collections and Generics Best Practices`][Collections and Generics Best Practices]
 
-### Entities implementation
+### Contacts management module `Entities`
 
     class User implements ContactItem:
         login
@@ -108,8 +109,7 @@ written by Twitter as part of its [Java common libraries][Twitter common librari
 ### MVC pattern
 
 It's a good practice to follow the [MVC][] design pattern, so it's better that we
-move the different entities in a dedicated package `entities`.
-
+move the different entities in a dedicated package `entities` .  
 You can find a basic implement of the MVC design pattern here:  
 https://www.geeksforgeeks.org/mvc-design-pattern
 
@@ -123,8 +123,10 @@ So we'll dedicated a `repositories` package to contain all repository classes.
 
 The singleton design pattern restricts the instantiation of a class to one
 "single" instance. This is useful when exactly one unique object is needed
-across the whole system. This will be useful for the repository classes and
-later for the database connection handler.
+across the whole system. You can find more details and an example of the
+implementation of the singleton design pattern here:
+https://www.geeksforgeeks.org/singleton-class-java .  
+This pattern will be useful for the repository classes.
 
 
 
