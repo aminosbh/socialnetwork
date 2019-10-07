@@ -41,6 +41,13 @@ public class User implements ContactItem {
     this.password = password;
   }
 
+  public User(String login, String password, String firstName, String lastName) {
+    this.login = login;
+    this.password = password;
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
   public User(String login, String password, String firstName, String lastName,
       Date dateOfBirth, Gender gender) {
     
