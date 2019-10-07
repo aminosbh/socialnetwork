@@ -36,12 +36,13 @@ import io.github.aminosbh.socialnetwork.repositories.UserRepository;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JPasswordField;
 
 public class LoginDialog extends JDialog {
 
   private final JPanel contentPanel = new JPanel();
   private JTextField fldLogin;
-  private JTextField fldPassword;
+  private JPasswordField fldPassword;
   private User user;
 
   public User getUser() {
@@ -86,7 +87,7 @@ public class LoginDialog extends JDialog {
       contentPanel.add(lblPassword, "1, 4, left, center");
     }
     {
-      fldPassword = new JTextField();
+      fldPassword = new JPasswordField();
       contentPanel.add(fldPassword, "3, 4, fill, top");
       fldPassword.setColumns(10);
     }
@@ -103,7 +104,7 @@ public class LoginDialog extends JDialog {
 
             UserRepository userRepository = UserRepository.getInstance();
             String login = fldLogin.getText();
-            String password = fldPassword.getText();
+            String password = new String(fldPassword.getPassword());
             User user = userRepository.findByLoginAndPassword(login, password);
             if (user != null) {
               LoginDialog.this.setUser(user);
