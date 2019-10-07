@@ -25,7 +25,7 @@ public class UserRepository {
   
   private List<User> users = new ArrayList<>();
 
-  public static UserRepository repository = null;
+  private static UserRepository repository = null;
 
   public static UserRepository getInstance() {
     if (repository == null) {

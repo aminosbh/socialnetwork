@@ -7,7 +7,7 @@ concepts and techniques.
 This tutorial is divided into chapters. Each one of them will implement a part
 of the project and let you learn a unique programming technique.
 
-This tutorial is managed with [git][] which means that you can go through the
+This tutorial is managed with [Git][] which means that you can go through the
 different commits to lean about the different steps and development decisions.
 Each commit is self-documented.
 
@@ -17,6 +17,25 @@ Each commit is self-documented.
 This project uses [Maven][] as a build system and [Eclipse][Eclipse IDE] as
 a main IDE.
 
+The best way to import this Git project into Eclipse is to import it first as a `General Git Project` and then convert it to `Maven Project`:
+
+**Import as a General Git Project:**
+
+- Click `File` > `Import...`
+- In the `Import` wizard:
+  1. Click `Git` > `Projects from Git`. Click `Next`.
+  2. Click `Clone URI` and then click `Next`.
+  3. In the `Source Git Repository` window, in the `URI` field, enter an existing Git repository URL and click `Next`.
+  4. In the `Branch Selection` window, make sure that the `master` branch is selected and click `Next`.
+  5. In the `Local Destination` window, specify the destination directory or keep the default value and then click `Next`.\
+  The `Cloning from <Git repository>` window shows the progress of the cloning process.
+  6. In the menu `Wizard of project import`, select `Import as general project`. Click `Next`.
+  7. In the `Import Projects` window, confirm or edit the default parameters and click `Finish`.
+
+**Convert into Maven Project:**
+
+1. In the projects tree, right click on the imported project.
+2. Scroll down and click `Configure` > `Convert to Maven Project`.
 
 ## **Chapter 1:** Contacts management
 
@@ -109,7 +128,7 @@ later for the database connection handler.
 
 
 
-[git]: https://git-scm.com
+[Git]: https://git-scm.com
 [Maven]: https://maven.apache.org
 [Eclipse IDE]: https://www.eclipse.org
 [Google Coding Style]: https://google.github.io/styleguide/javaguide.html
