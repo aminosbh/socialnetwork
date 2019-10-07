@@ -36,6 +36,8 @@ public class LoginDialog extends JDialog {
    * Create the dialog.
    */
   public LoginDialog() {
+    setModal(true);
+    setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
     setTitle("Social Network - Login");
     setBounds(100, 100, 403, 118);
     getContentPane().setLayout(new BorderLayout());
