@@ -17,6 +17,32 @@ Each commit is self-documented.
 This project uses [Maven][] as a build system and [Eclipse][Eclipse IDE] as
 a main IDE.
 
+### Create a new Maven project
+
+The following is a list of instructions that let you create a new Maven project
+using Eclipse:
+- Click `File` > `New` > `Project...`
+- In the `New Project` wizard:
+  1. Click `Maven` > `Maven Project`. Click `Next`.
+  2. In the `New Maven Project` window, check `Create a simple project (...)`
+     and the click `Next`.
+  3. Specify the `groupId` in the `Group Id` field.
+     > The `groupId` uniquely identifies your project across all projects.
+     > A group ID should follow Java's package name rules. This means it starts
+     > with a reversed domain name you control. For example, `org.apache.maven`,
+     > `org.apache.commons`
+     >> For more details, see [Maven naming conventions][]
+  4. Specify the `artifactId` in the `Artifact Id` field.
+     > The `artifactId` is the name of the jar without version. If you created
+     > it, then you can choose whatever name you want with lowercase letters and
+     > no strange symbols. If it's a third party jar, you have to take the name
+     > of the jar as it's distributed. eg. `maven`, `commons-math`
+     >> For more details, see [Maven naming conventions][]
+  5. Keep the default version name and click `Finish`.
+
+
+### Import the current project
+
 The best way to import this Git project into Eclipse is to import it first as a
 `General Git Project` and then convert it to `Maven Project`:
 
@@ -38,7 +64,7 @@ The best way to import this Git project into Eclipse is to import it first as a
 1. In the projects tree, right click on the imported project.
 2. Scroll down and click `Configure` > `Convert to Maven Project`.
 
-## **Chapter 1:** Contacts management
+## **Chapter 1:** Contacts management module
 
 In this chapter, we are going to implement the `Contacts management` module.  
 We'll start by declaring the different necessary entities (classes, interfaces,
@@ -110,7 +136,7 @@ written by Twitter as part of its [Java common libraries][Twitter common librari
 
 It's a good practice to follow the [MVC][] design pattern, so it's better that we
 move the different entities in a dedicated package `entities` .  
-You can find a basic implement of the MVC design pattern here:  
+You can find a basic implement of the MVC design pattern here:
 https://www.geeksforgeeks.org/mvc-design-pattern
 
 ### Repository pattern:
@@ -123,15 +149,17 @@ So we'll dedicated a `repositories` package to contain all repository classes.
 
 The singleton design pattern restricts the instantiation of a class to one
 "single" instance. This is useful when exactly one unique object is needed
-across the whole system. You can find more details and an example of the
+across the whole system.  
+You can find more details and an example of the
 implementation of the singleton design pattern here:
 https://www.geeksforgeeks.org/singleton-class-java .  
-This pattern will be useful for the repository classes.
+This pattern will be useful for the repository classes. Let's start by the `UserRepository` class.
 
 
 
 [Git]: https://git-scm.com
 [Maven]: https://maven.apache.org
+[Maven naming conventions]: https://maven.apache.org/guides/mini/guide-naming-conventions.html
 [Eclipse IDE]: https://www.eclipse.org
 [Google Coding Style]: https://google.github.io/styleguide/javaguide.html
 [Twitter Coding Style]: https://github.com/twitter/commons/blob/master/src/java/com/twitter/common/styleguide.md
