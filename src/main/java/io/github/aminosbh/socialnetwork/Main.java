@@ -16,6 +16,7 @@
 
 package io.github.aminosbh.socialnetwork;
 
+import io.github.aminosbh.socialnetwork.entities.User;
 import io.github.aminosbh.socialnetwork.view.LoginDialog;
 
 public class Main {
@@ -25,6 +26,12 @@ public class Main {
     LoginDialog loginDialog = new LoginDialog();
     loginDialog.setVisible(true);
     
+    User user = loginDialog.getUser();
+    if (user != null) {
+      System.out.println("User '" + user + "' logged in");
+    }
+
+    System.out.println("Exit");
   }
 
 }

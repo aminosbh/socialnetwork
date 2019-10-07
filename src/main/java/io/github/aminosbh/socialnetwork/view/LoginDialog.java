@@ -24,11 +24,16 @@ import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import com.jgoodies.forms.layout.FormLayout;
 import com.jgoodies.forms.layout.ColumnSpec;
 import com.jgoodies.forms.layout.FormSpecs;
 import com.jgoodies.forms.layout.RowSpec;
+
+import io.github.aminosbh.socialnetwork.entities.User;
+import io.github.aminosbh.socialnetwork.repositories.UserRepository;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -37,6 +42,15 @@ public class LoginDialog extends JDialog {
   private final JPanel contentPanel = new JPanel();
   private JTextField fldLogin;
   private JTextField fldPassword;
+  private User user;
+
+  public User getUser() {
+    return user;
+  }
+
+  public void setUser(User user) {
+    this.user = user;
+  }
 
   /**
    * Create the dialog.
@@ -86,7 +100,18 @@ public class LoginDialog extends JDialog {
 
           @Override
           public void actionPerformed(ActionEvent arg0) {
-            System.out.println("The login button is pressed");
+
+            UserRepository userRepository = UserRepository.getInstance();
+            String login = fldLogin.getText();
+            String password = fldPassword.getText();
+            User user = userRepository.findByLoginAndPassword(login, password);
+            if (user != null) {
+              LoginDialog.this.setUser(user);
+              LoginDialog.this.dispose();
+            } else {
+              JOptionPane.showMessageDialog(LoginDialog.this,
+                  "Incorrect username or password.", "Login error", JOptionPane.ERROR_MESSAGE);
+            }
           }
 
         });
@@ -96,6 +121,11 @@ public class LoginDialog extends JDialog {
       }
       {
         JButton btnQuit = new JButton("Quit");
+        btnQuit.addActionListener(new ActionListener() {
+          public void actionPerformed(ActionEvent arg0) {
+            LoginDialog.this.dispose();
+          }
+        });
         btnQuit.setActionCommand("Cancel");
         buttonPane.add(btnQuit);
       }

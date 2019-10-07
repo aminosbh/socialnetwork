@@ -186,4 +186,9 @@ public class User implements ContactItem {
   public void removeContact(ContactItem contact) {
     contacts.remove(contact);
   }
+
+  @Override
+  public String toString() {
+    return firstName + " " + lastName;
+  }
 }
