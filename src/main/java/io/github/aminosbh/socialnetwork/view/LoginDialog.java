@@ -25,6 +25,10 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import com.jgoodies.forms.layout.FormLayout;
+import com.jgoodies.forms.layout.ColumnSpec;
+import com.jgoodies.forms.layout.FormSpecs;
+import com.jgoodies.forms.layout.RowSpec;
 
 public class LoginDialog extends JDialog {
 
@@ -39,27 +43,35 @@ public class LoginDialog extends JDialog {
     setModal(true);
     setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
     setTitle("Social Network - Login");
-    setBounds(100, 100, 403, 118);
+    setBounds(100, 100, 273, 152);
     getContentPane().setLayout(new BorderLayout());
     contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
     getContentPane().add(contentPanel, BorderLayout.CENTER);
-    contentPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+    contentPanel.setLayout(new FormLayout(new ColumnSpec[] {
+        ColumnSpec.decode("77px"),
+        FormSpecs.LABEL_COMPONENT_GAP_COLSPEC,
+        ColumnSpec.decode("114px:grow"),},
+      new RowSpec[] {
+        FormSpecs.UNRELATED_GAP_ROWSPEC,
+        RowSpec.decode("21px"),
+        FormSpecs.LINE_GAP_ROWSPEC,
+        RowSpec.decode("21px"),}));
     {
       JLabel lblLogin = new JLabel("Login:");
-      contentPanel.add(lblLogin);
+      contentPanel.add(lblLogin, "1, 2, left, center");
     }
     {
       fldLogin = new JTextField();
-      contentPanel.add(fldLogin);
+      contentPanel.add(fldLogin, "3, 2, fill, top");
       fldLogin.setColumns(10);
     }
     {
       JLabel lblPassword = new JLabel("Password:");
-      contentPanel.add(lblPassword);
+      contentPanel.add(lblPassword, "1, 4, left, center");
     }
     {
       fldPassword = new JTextField();
-      contentPanel.add(fldPassword);
+      contentPanel.add(fldPassword, "3, 4, fill, top");
       fldPassword.setColumns(10);
     }
     {
